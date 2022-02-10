@@ -1,0 +1,486 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container {  display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.7fr 1.7fr 0.6fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "headerContainer"
+      "mainContainer"
+      "footerContainer";
+  }
+  
+/* ---------HEADER----------- */
+/* ---------HEADER----------- */
+/* ---------HEADER----------- */
+
+  .headerContainer { grid-area: headerContainer;
+    background-color: white;
+    border-radius: 10px;
+  }
+
+header img {
+    height: 50px;
+}
+
+
+/* ---------MAIN----------- */
+/* ---------MAIN----------- */
+/* ---------MAIN----------- */
+
+.mainContainer { grid-area: mainContainer; 
+display: flex;
+}
+
+.icon-bar {
+    position: fixed;
+    padding: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.icon-bar a {
+    height: 40px;
+    position: relative;
+    margin: 20px 40px;
+    background-color: #eee;
+    font-size: 20px;
+    width: 50px;
+    display: flex;
+    color: #666;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30%;
+    text-decoration: none;
+    transition: .3s ease;
+}
+
+.icon-bar a:hover {
+    background-color: #c4141c;
+    
+    color: white;
+    
+}
+
+.texto{
+    position: absolute;
+    top: 0;
+    left: 50px;
+    height: 40px;
+    transition: .5s;
+    background-color: #fcb415;
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    width: 0;
+    border: 1px solid #c4141c;
+    /* background-color: #666; */
+}
+
+.icon-bar a:hover .texto {
+    width: 150px;
+    opacity: 1;
+}
+
+.icon-bar .selected {
+    background-color: #c4141c;
+    background-color: #666;
+    color: white;
+    border: 1px solid #c4141c;
+}
+
+#inicio .foto {
+    height: 350px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 30px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#inicio .foto img {
+    height: 100%;
+    margin-right: 100px;
+    margin-top: 40px;
+    background-size: cover;
+    border-radius: 20%;
+    -webkit-box-shadow: 6px 3px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 6px 3px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 6px 3px 5px 0px rgba(0,0,0,0.75);
+    border-radius: 15px 69px 69px 15px;
+    -moz-border-radius: 15px 69px 69px 15px;
+    -webkit-border-radius: 15px 69px 69px 15px;
+    border: 13px none #000000;
+}
+
+#inicio .presentacion {
+    width: 40%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 300px;
+}
+
+#inicio .presentacion h1 {
+    font-size: 51px;
+}
+
+#inicio .presentacion .txt-special {
+    color: #c4141c;
+}
+
+#inicio .presentacion p {
+    font-size: 16px;
+    line-height: 30px;
+}
+
+#inicio .presentacion .boton {
+    border: none;
+    background-color: transparent;
+    font-size: 18px;
+    border: 1px solid  #fcb415;
+    padding: 15px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #666;
+    transition: .5s;
+}
+
+#inicio .presentacion .boton:hover {
+    background-color: #c4141c;
+    color: #eee;
+}
+
+/* ---------FOOTER----------- */
+/* ---------FOOTER----------- */
+/* ---------FOOTER----------- */
+
+.footerContainer { grid-area: footerContainer;
+    position: absolute;
+    bottom: 0;
+    height: 80px;
+    width: 100%;
+    background-color: #666;
+}
+
+footer h3, footer p {
+    color: #eee;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/*----------------------SECCIONES--------------------- */
+
+.containerCards {
+    margin-left: 185px;
+    margin-top: 70px;
+    /* width: 100%; */
+    display: flex;
+    max-width: 1100px;
+}
+
+.card {
+    /* width: 100%; */
+    margin: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover {
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-3%);
+}
+
+.card img {
+    width: 100%;
+    height: 210px;
+}
+
+.card .contenido {
+    padding: 15px;
+    text-align: center;
+}
+
+.card .contenido p {
+    line-height: 1.5;
+    columns: #666;
+}
+
+.card .contenido h3 {
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.ubicacion {
+    /* width: 100%; */
+    bottom: 0;
+}
+
+.ubicacion iframe {
+    margin-top: 25px;
+    height: 400px;
+    margin-left: 370px;
+    align-items: center;
+    align-content: center;
+}
+
+.ubicacion h3 {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.containerForm {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 50px;
+}
+
+.containerForm h2 {
+    margin-bottom: 15px;
+    font-size: 35px;
+    margin-left: 180px;
+}
+
+
+.containerForm p {
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    margin-left: 100px;
+}
+
+.containerForm a {
+    font-size: 17px;
+    display: inline-block;
+    text-decoration: none;
+    width: 100%;
+    margin-bottom: 15px;
+    color: rgb(54, 51, 51);
+    font-weight: 700;
+    margin-left: 80px;
+    padding-top: 20px;
+}
+
+.containerForm a i {
+    color: #666;
+    margin-left: 100px;
+    
+}
+
+.containerForm form .campo, textarea {
+    width: 100%;
+    padding: 15px 10px;
+    font-size: 15px;
+    border: solid 1px #c4141c;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    outline: 0px;
+}
+
+.containerForm form textarea {
+    max-width: 530px;
+    min-width: 530px;
+    max-height: 140px;
+    min-height: 140px;
+}
+
+.containerForm .botonEnviar {
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    outline: 0px;
+    background-color: #c4141c;
+    color: #eee;
+    border-radius: 3px;
+
+}
+
+.botonEnviar:hover {
+    background-color: #eee;
+    color: #c4141c;
+}
+
+
+/* ---------MEDIAQ----------- */
+/* ---------MEDIAQ----------- */
+/* ---------MEDIAQ----------- */
+/* ---------MEDIAQ----------- */
+/* ---------MEDIAQ----------- */
+/* ---------MEDIAQ----------- */
+/* ---------MEDIAQ----------- */
+/* ---------MEDIAQ----------- */
+/* ---------MEDIAQ----------- */
+
+@media only screen and (max-width: 1100px) {
+
+
+    #inicio .presentacion h1 {
+        font-size: 40px;
+    }
+
+    #inicio .presentacion p {
+        font-size: 15px;
+        line-height: 20px;
+    }
+    
+    #inicio .presentacion {
+        top: 50%;
+        left: 200px;
+    }
+    .icon-bar {
+        position: absolute;
+        padding: 30px;
+        top: 50%;
+    }
+    .icon-bar a:hover .texto {
+        width: 100px;
+    }
+
+    .texto {
+        font-size: 10px;
+    }
+
+    .icon-bar a {
+        height: 30px;
+        margin: 20px 5px;
+    }
+
+    .containerCards {
+        flex-wrap: wrap;
+        /* width: 500px; */
+    }
+    .footerContainer {
+        bottom: 0;
+    }
+
+    .card {
+        /* width: 100%; */
+        margin: 5px;
+    }
+
+    .foot {
+        position: relative;
+        bottom: 0;
+    }
+
+    .ubicacion iframe {
+        margin-left: 400px;
+        height: 350px;
+        width: 350px;
+    }
+    
+}
+
+@media only screen and (max-width: 1000px) {
+
+    #inicio .foto {
+        height: 200px;
+    }
+    
+    #inicio .presentacion .boton{
+        margin-top: 10%;
+    }
+
+    .presentacion {
+        margin-right: 50px;
+    }
+
+    .foot {
+        position: relative;
+        bottom: 0;
+        margin-top: 10px;
+    }
+
+    .containerForm {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .containerForm {
+        width: 50%;
+        max-width: 1100px;
+        /* margin: auto; */
+    }
+
+}
+
+@media only screen and (max-width: 800px) {
+    #inicio .foto {
+    opacity: 0;
+    }
+
+    #inicio .presentacion h1 {
+        font-size: 40px;
+        align-items: center;
+    }
+
+    #inicio .presentacion p {
+        font-size: 15px;
+        line-height: 20px;
+        align-items: center;
+    }
+
+    .foot {
+        position: relative;
+        bottom: 0;
+    }
+    .ubicacion iframe {
+        margin-left: 200px;
+        height: 350px;
+        width: 350px;
+    }
+
+    .containerForm {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .containerForm form textarea {
+        max-width: 300px;
+        min-width: 300px;
+        max-height: 100px;
+        min-height: 100px;
+    }
+}
+
+@media only screen and (max-width:580px) {
+    .presentacion {
+        padding-right: 10px;
+    }
+
+    .ubicacion iframe {
+        margin-left: 180px;
+        height: 250px;
+        width: 250px;
+        margin-top: 100px;
+    }
+
+    #inicio .presentacion .boton{
+        margin-top: 2px;
+        height: 20px;
+        width: 80px;
+        padding: 3px 5px;
+        font-size: 10px;
+    }
+}
+
+
+
+
+
